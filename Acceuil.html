@@ -7,10 +7,6 @@
 	</head>
 	<article id="Bandeau">
 	<h1>Animal Rescue</h1>
-	</article>	
-<body>
-	<div id="centre">
-	</div>
 		    <div id="compte_a_rebours"></div> 
 <div id="compte_a_rebours"><noscript>Fin de l'évènement le 18 mars 2016 à 14h .</noscript></div> 
 <script type="text/javascript"> 
@@ -22,7 +18,7 @@ var date_actuelle = new Date();
 var date_evenement = new Date("mar 18 14:00:00 2016"); 
 var total_secondes = (date_evenement - date_actuelle) / 1000; 
 
-	var prefixe = "Animal Rescue dans "; 
+	var prefixe = "dans "; 
 	if (total_secondes < 0) 
  	{ 
  		prefixe = "Compte à rebours terminé il y a "; // On modifie le préfixe si la différence est négatif 
@@ -99,6 +95,11 @@ var total_secondes = (date_evenement - date_actuelle) / 1000;
 } 
 compte_a_rebours(); 
  </script> 
+	</article>	
+<body>
+	<div id="centre">
+	</div>
+
 </body>
 
 
