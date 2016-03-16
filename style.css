@@ -49,6 +49,7 @@ h1{
 	text-align : center;
 }
 #compte_a_rebours{
+	text-align : center;
 	font-family : "YIKES!";
 	font-size : 2em;
 	text-shadow: #FFFFFF 1px 1px, #FFFFFF -1px 1px, #FFFFFF -1px -1px, #FFFFFF 1px -1px;
