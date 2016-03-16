@@ -1,9 +1,9 @@
 <!DOCTYPE>
 <html>
 	<head>
-	        <title>Accueil</title>
-	        <meta charset="utf-8"/>
-	        <link rel="stylesheet" href="style.css"/>
+        <title>Accueil</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css"/>
 	</head>
     
     <body>
@@ -12,9 +12,10 @@
             <h1>Animal Rescue</h1>
         </article>	
 
-        <div id="compteur"></div>
-
         <div id="centre">
+            
+            <div id="compteur"></div>
+            
             <script>
 
                 function compte_a_rebours() 
@@ -35,7 +36,7 @@
                         var minutes = Math.floor((total_secondes - ((jours * 60 * 60 * 24 + heures * 60 * 60))) / 60);
                         var secondes = Math.floor(total_secondes - ((jours * 60 * 60 * 24 + heures * 60 * 60 + minutes * 60)));
 
-                        compte_final = jours + 'jours' + ' ' + heures + ':' + minutes + ':' + secondes;
+                        compte_final = 'Animal Rescue vous sera présenté dans ' + jours + ' jour' + ' ' + heures + ' heure ' + minutes + ' minutes et ' + secondes + ' secondes !';
                     }
                     else
                     {
@@ -50,6 +51,10 @@
                 compte_a_rebours();
 
             </script>
+            
+            <br/>
+            <iframe width="854" height="480" src="https://www.youtube.com/embed/BYtof26RGTc" frameborder="0" allowfullscreen></iframe>
+            
         </div>
     </body>
 </html>
