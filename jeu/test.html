@@ -36,8 +36,14 @@
             {
                 $('#jeu').after('<div class="obstacle" id="obst'+n+'"></div>');
                 $('#obst'+n).css('left', liste[n]+'px');
+                
+                if (liste_t[n] === 1)
+                {
+                    console.log('un');
+                    $('#obst'+n).css({bottom: haut+70+70});
+                }
             }
-
+            
             $('.obstacle').animate( {left: '-=4000'}, 15000, 'linear');
             
             
