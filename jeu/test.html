@@ -30,19 +30,12 @@
             /* O B S T A C L E */
             
             europe.generationObst();
-            var listePO = europe.getListePlaceObst();
-            // var listeTO = europe.getListTypeObst(); CA J'Y TRAVAILLE
-
-            for (n in listePO)
+            var liste = europe.getListePlaceObst();
+            
+            for (n in liste)
             {
                 $('#jeu').after('<div class="obstacle" id="obst'+n+'"></div>');
                 $('#obst'+n).css('left', liste[n]+'px');
-                
-                /* CA AUSSI
-                if (listeTO[n] === true)
-                {
-                    $('#obst'+n).css('bottom', '+=50px');
-                }*/
             }
 
             $('.obstacle').animate( {left: '-=4000'}, 15000, 'linear');
