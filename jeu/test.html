@@ -1,1 +1,62 @@
+<!DOCTYPE html>
 
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    
+    <body>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="animal.js"></script>
+        <script src="continent.js"></script>
+        
+        <div id="jeu">
+            <div id="joueur"></div>
+        </div>
+        
+        <script>
+            
+            /* M A P */
+            
+            var europe = new continent('europe', 'bg_europe.jpg') // initialise le continent
+            var bg = europe.getSrc(); // source du background
+            $('#jeu').after('<img id="fond" src="'+ bg +'"/>'); // place le fond
+            $('#fond').animate( {left: '-=4000'}, 15000, 'linear' ); // fait avancer le fond
+
+            
+            /* P E R S O */
+            
+            var renard = new animal('fox_c.png','fox_e.png','renard');
+            
+            $(document).keyup(function(touche)
+            {
+                if (touche.which == 38)
+                {
+                    renard.saute();
+                }
+                if (touche.which == 40)
+                {
+                    renard.esquive();
+                }
+            });
+            
+            
+            /* O B S T A C L E */
+            var y = 0;
+            var n;
+            var liste = europe.generationObst();
+            for (n in liste)
+            {
+                console.log(liste[n]);
+                y++;
+                $('#jeu').after('<div class="obstacle" id="obst'+y+'"></div>');
+                $('#obst'+y).css('left', liste[n]+'px');
+            }
+            $('.obstacle').animate( {left: '-=4000'}, 15000, 'linear');
+            
+
+        </script>
+    </body>
+</html>
