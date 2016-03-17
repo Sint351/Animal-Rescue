@@ -25,8 +25,17 @@
             var bg = europe.getSrc(); // source du background
             $('#jeu').after('<img id="fond" src="'+ bg +'"/>'); // place le fond
             $('#fond').animate( {left: '-=4000'}, 15000, 'linear' ); // fait avancer le fond
-
-
+            
+            
+            /* E C R A N S */
+            
+            var hauteur_fenetre = $(window).height();
+            var haut = (hauteur_fenetre / 2) - ($('#fond').height() / 2);
+            
+            $('#fond').css({top: haut});
+            $('#joueur').css({bottom: haut+70});
+            
+            
             /* O B S T A C L E */
             
             europe.generationObst();
@@ -45,17 +54,6 @@
             }
             
             $('.obstacle').animate( {left: '-=4000'}, 15000, 'linear');
-            
-            
-            
-            /* E C R A N S */
-            
-            var hauteur_fenetre = $(window).height();
-            var haut = (hauteur_fenetre / 2) - ($('#fond').height() / 2);
-            
-            $('#fond').css({top: haut});
-            $('.obstacle').css({bottom: haut+70});
-            $('#joueur').css({bottom: haut+70});
 
             
 
