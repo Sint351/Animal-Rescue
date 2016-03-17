@@ -34,7 +34,7 @@ class animal
             $('#joueur').css('background-image', 'url(\''+p_src+'\')');
             $('#joueur').height(100);
         }
-        setTimeout(releve, 400, this.src_spritC); // appel la fonction de releve apres 400ms
+        setTimeout(releve, 700, this.src_spritC); // appel la fonction de releve apres 400ms
     }
 
     getNom()
