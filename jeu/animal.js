@@ -6,38 +6,40 @@ class animal
         this.src_spritE = p_spritE;
         this.nom_an = p_nom;
     }
-    
+
     saute()
     {
-        $('#joueur').animate
+        /* realise le saut du perso */
+        
+        $('#joueur').animate // fais monter le perso
         (
-            {bottom: "750px"}, 400, 'swing', 
-            function()
+            {bottom: "+=100px"}, 500, 'swing', 
+            function() // fais redessendre le perso
             {
                 $('#joueur').animate
-                ({bottom: "650px"}, 400);
+                ({bottom: "-=100px"}, 500);
             }
         );
     }
-    
+
     esquive()
     {
-        /* PROCEDURE qui charge le sprite ou le perso se baisse */
-        $('#joueur').css('background-image', 'url(\''+this.src_spritE+'\')');
-        $('#joueur').height(70);
+        /* realise le mouvement d'esquive du perso */
 
-        function baisse(p_src)
+        $('#joueur').css('background-image', 'url(\''+this.src_spritE+'\')'); // charge la source du sprite d'esquive
+        $('#joueur').height(70); // baisse la hauteur du perso
+
+        function releve(p_src) // permet au perso de se relever
         {
             $('#joueur').css('background-image', 'url(\''+p_src+'\')');
             $('#joueur').height(100);
         }
-        
-        setTimeout(baisse, 300, this.src_spritC);
+        setTimeout(releve, 400, this.src_spritC); // appel la fonction de releve apres 400ms
     }
-    
+
     getNom()
     {
-        /* FONCTION qui renvoie le nom de l'animal */
+        /* renvoie le nom de l'animal */
         return this.nom_an;
     }
 }
