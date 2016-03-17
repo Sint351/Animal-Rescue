@@ -13,11 +13,11 @@ class animal
         
         $('#joueur').animate // fais monter le perso
         (
-            {bottom: "+=100px"}, 500, 'swing', 
+            {bottom: "+=100px"}, 1000, 'swing', 
             function() // fais redessendre le perso
             {
                 $('#joueur').animate
-                ({bottom: "-=100px"}, 500);
+                ({bottom: "-=100px"}, 1000);
             }
         );
     }
@@ -34,7 +34,7 @@ class animal
             $('#joueur').css('background-image', 'url(\''+p_src+'\')');
             $('#joueur').height(100);
         }
-        setTimeout(releve, 600, this.src_spritC); // appel la fonction de releve apres 400ms
+        setTimeout(releve, 1000, this.src_spritC); // appel la fonction de releve apres 400ms
     }
 
     getNom()
