@@ -1,20 +1,63 @@
-/*#jeu{
-    width: 640px;
-    height: 400px;
-    border: 2px black solid;
-    overflow: hidden;
-    position: absolute;
-    display: inline;
-    bottom: 50px;
-}*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, caption, tfoot, thead,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/*
+@font-face
+{
+	font-family : Yikes!;
+	src: url('YIKES!.ttf');
+}
+*/
+
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: #1E7FCB;
+    text-align: center;
+}
+
+/*
+#centre{
+    font-family: 'Arial';
+    font-size: 2em;
+    color: white;
+	margin-left : auto;
+	margin-right : auto;
+	width : 60%;
+	height : 40%;
+	border-color : white ;
+	display : table-cell;
+	vertical-align : middle;
+}
+*/
 
 #fond{
+    z-index: 10;
     left: 500px;
     height: 400px;
     display: inline;
+    border: 10px white solid;
     margin-left: -5px;
-    z-index: 10;
-    position: relative;
+    position: absolute;
 }
 
 #joueur{
@@ -24,18 +67,16 @@
     width: 150px;
     height: 100px;
     background-size: contain;
-    background-image: url('fox_c.png');
     background-repeat: no-repeat;
     position: absolute;
 }
 
 .obstacle{
+    z-index: 50;
     border: 2px black solid;
-    float: left;
-    position: absolute;
-    z-index: 100;
     background-color: gray;
-    bottom: 650px;
+    float: left;
     width: 50px;
     height: 50px;
+    position: absolute;
 }
