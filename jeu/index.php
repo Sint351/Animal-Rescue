@@ -18,25 +18,23 @@
             <div id="joueur"></div>
         </div>
         
-        <script>            
+        <script>
             
-            
-            var creation = initialisations('eur');
-            
+            var creation = initialisations(<?php echo($_GET['cont']); ?>);
             
             function initialisations(p_niveau)
             {
                 switch (p_niveau)
                 {
-                    case 'eur':
+                    case 1:
                         var map = new continent('europe', 'europe/bg_europe.jpg');
                         var pers = new animal('europe/fox_c.png','europe/fox_e.png','renard');
                         break;
-                    case 'ame':
+                    case 2:
                         var map = new continent('amerique', 'amerique/bg_amerique.jpg');
                         var pers = new animal('amerique/lama_c.png','amerique/lama_e.png','lama');
                         break;
-                    case 'ant':
+                    case 3:
                         var map = new continent('antarctique', 'antarctique/bg_antarctique.jgp');
                         var pers = new animal('antarctique/ping_c.png','antarctique/ping_e.png','pingouin');
                         break;
@@ -89,7 +87,7 @@
             
             function gameOver()
             {
-                document.location.href="../game_over/";
+                document.location.href="../game_over/index.php?cont="+<?php echo($_GET['cont']); ?>;
             }
             
             
