@@ -4,34 +4,38 @@ class continent
     {
         this.nom_cont = p_nom;
         this.src_sprit = p_sprit;
-        this.listObst = [];
-        this.listHaut = [];
+        this.listePlaceObst = [];
+        this.listeTypeObst = [];
     }
     
-    decore()
+    generationObst(p_place, p_type)
     {
-        /* PROCEDURE qui gere le déplacement du background */
-        
+        /* genere le listes stockant les obstacles */
+        this.listePlaceObst = p_place;
+        this.listeTypeObst = p_type;
     }
-    
-    generationObst()
+
+    getListePlaceObst()
     {
-        /* FONCTION qui gere la création des obstacles */
-        this.listObst = [1000, 2000, 3000];
-        this.listHaut = [0, 1, 0];
-        
-        return this.listObst;
+        /* renvoie la liste stockant les emplacement des obstacles */
+        return this.listePlaceObst;
     }
     
+    getListeTypeObst()
+    {
+        /* renvoie la liste stockant le type des obstacles */
+        return this.listeTypeObst;
+    }
+        
     getSrc()
     {
-        /* FONCTION qui renvoie la source du background */
+        /* renvoie la source du background */
         return this.src_sprit;
     }
     
     getNom()
     {
-        /* FONCTION qui renvoie le nom du contient */
+        /* renvoie le nom du contient */
         return this.nom_cont;
     }
 }
